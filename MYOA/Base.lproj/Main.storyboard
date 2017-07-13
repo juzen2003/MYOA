@@ -1,26 +1,381 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C9G-6V-nhQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="ue0-D5-wN3">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="C9G-6V-nhQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V7x-Pb-aVe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OdC-JL-IQU" kind="relationship" relationship="rootViewController" id="pqg-qo-uQV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pk3-mP-E6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-970" y="81"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jDb-LD-HXb">
+            <objects>
+                <viewController id="OdC-JL-IQU" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="6Hx-Fh-Lti"/>
+                        <viewControllerLayoutGuide type="bottom" id="clV-jo-6L7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="czB-Az-8U6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="O2u-bh-Uc2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YWo-O4-AHM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">
+You are alone in a dark room.
+
+You see a huge door.
+
+You open up the door, and there are two paths.
+
+Which way you want to go?
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EL7-UG-qF7">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCb-H1-J9J">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                                <state key="normal" title="Go Left"/>
+                                                <connections>
+                                                    <segue destination="tym-aj-L4c" kind="show" id="Jii-tm-aVQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZn-Ny-qKA">
+                                                <rect key="frame" x="0.0" y="167" width="375" height="166.5"/>
+                                                <state key="normal" title="Go Right"/>
+                                                <connections>
+                                                    <segue destination="SEu-Zv-ON6" kind="show" id="mSz-Sx-J35"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="clV-jo-6L7" firstAttribute="top" secondItem="O2u-bh-Uc2" secondAttribute="bottom" id="8nL-Kb-dXa"/>
+                            <constraint firstItem="O2u-bh-Uc2" firstAttribute="leading" secondItem="czB-Az-8U6" secondAttribute="leading" id="9w5-vq-32C"/>
+                            <constraint firstAttribute="trailing" secondItem="O2u-bh-Uc2" secondAttribute="trailing" id="PlS-uH-flx"/>
+                            <constraint firstItem="O2u-bh-Uc2" firstAttribute="top" secondItem="czB-Az-8U6" secondAttribute="top" id="phh-QP-duW"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mkp-Fl-34f"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PhC-El-zit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-209" y="81"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oI5-AC-qz3">
+            <objects>
+                <viewController id="tym-aj-L4c" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Eqd-pg-MX0"/>
+                        <viewControllerLayoutGuide type="bottom" id="xsb-JK-NdF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hfk-JD-1nr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="B0f-pE-axO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0jr-RR-Tnt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">
+You turn left and continue walking.
+
+At the end, you hear the sounds of water.
+
+And then a stair, what's your next move?
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SrT-T9-hZJ">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeX-vo-NgE">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                                <state key="normal" title="Go Upstairs"/>
+                                                <connections>
+                                                    <segue destination="JAo-u2-qBt" kind="show" id="eu6-67-tv9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKS-J2-Vrb">
+                                                <rect key="frame" x="0.0" y="167" width="375" height="166.5"/>
+                                                <state key="normal" title="Go Downstairs"/>
+                                                <connections>
+                                                    <segue destination="gBd-0f-TuR" kind="show" id="srS-1w-xvs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B0f-pE-axO" firstAttribute="top" secondItem="hfk-JD-1nr" secondAttribute="top" id="JuY-DQ-Eqp"/>
+                            <constraint firstAttribute="trailing" secondItem="B0f-pE-axO" secondAttribute="trailing" id="Kug-Zk-agR"/>
+                            <constraint firstItem="xsb-JK-NdF" firstAttribute="top" secondItem="B0f-pE-axO" secondAttribute="bottom" id="uyr-bM-ZNb"/>
+                            <constraint firstItem="B0f-pE-axO" firstAttribute="leading" secondItem="hfk-JD-1nr" secondAttribute="leading" id="zUk-3W-K1i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oHC-cO-GOa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOh-GP-16f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="-287"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZO5-hF-lqL">
+            <objects>
+                <viewController id="SEu-Zv-ON6" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZv-53-LP0"/>
+                        <viewControllerLayoutGuide type="bottom" id="F3e-7r-NuH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Dd-hg-kbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="p2O-bd-Txd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vqD-Vd-USa">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">
+You turn right and see a huge brick wall right way.
+
+But there is a huge hole on wall, and it's dark inside. 
+
+Do you want to walk inside? 
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VnT-mC-Eiv">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXT-5k-jDQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                                <state key="normal" title="Sure, Let's Go!"/>
+                                                <connections>
+                                                    <segue destination="lmV-lU-tTh" kind="show" id="G8i-zc-pcw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoW-PP-gIG">
+                                                <rect key="frame" x="0.0" y="167" width="375" height="166.5"/>
+                                                <state key="normal" title="Um, I Wanna Turn Around And Go Back!"/>
+                                                <connections>
+                                                    <segue destination="mVZ-i6-TJa" kind="show" id="7zd-Hh-W5M"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="p2O-bd-Txd" secondAttribute="trailing" id="9nb-rx-vDY"/>
+                            <constraint firstItem="p2O-bd-Txd" firstAttribute="top" secondItem="5Dd-hg-kbJ" secondAttribute="top" id="Gra-g6-NcP"/>
+                            <constraint firstItem="p2O-bd-Txd" firstAttribute="leading" secondItem="5Dd-hg-kbJ" secondAttribute="leading" id="NP4-rR-gDa"/>
+                            <constraint firstItem="F3e-7r-NuH" firstAttribute="top" secondItem="p2O-bd-Txd" secondAttribute="bottom" id="YcK-Ur-ugE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="orE-Sk-0na"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nev-ka-gcD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="379"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jkN-E8-KbM">
+            <objects>
+                <viewController id="JAo-u2-qBt" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c7l-Sa-EC8"/>
+                        <viewControllerLayoutGuide type="bottom" id="YQG-l6-Iwf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nxl-4p-0wa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g5i-Ez-ggA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">
+You enter a cozy room with bed and big window.
+
+And then fall asleep on the bed while seeing stars from the window.
+
+Have a nice dream!
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g5i-Ez-ggA" secondAttribute="trailing" id="7QF-Zs-BwM"/>
+                            <constraint firstItem="g5i-Ez-ggA" firstAttribute="leading" secondItem="nxl-4p-0wa" secondAttribute="leading" id="S0I-d1-rCO"/>
+                            <constraint firstItem="g5i-Ez-ggA" firstAttribute="top" secondItem="nxl-4p-0wa" secondAttribute="top" id="uNM-Ms-uUk"/>
+                            <constraint firstItem="YQG-l6-Iwf" firstAttribute="top" secondItem="g5i-Ez-ggA" secondAttribute="bottom" id="vX2-5H-MsJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WBB-3J-ZEE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZa-UE-e8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327" y="-746"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FPz-jM-Xfy">
+            <objects>
+                <viewController id="gBd-0f-TuR" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jnc-PK-ZTA"/>
+                        <viewControllerLayoutGuide type="bottom" id="GpI-He-6yR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ubg-HC-KSF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nle-Wx-WF0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">
+You walk into a dungeon.
+
+It's cold and dark, and all of a sudden, stairs are broken.
+
+You stuck in the maze of this huge dungeon.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nle-Wx-WF0" firstAttribute="leading" secondItem="ubg-HC-KSF" secondAttribute="leading" id="GjK-1N-Kri"/>
+                            <constraint firstItem="GpI-He-6yR" firstAttribute="top" secondItem="Nle-Wx-WF0" secondAttribute="bottom" id="J9n-uq-NYi"/>
+                            <constraint firstAttribute="trailing" secondItem="Nle-Wx-WF0" secondAttribute="trailing" id="OZF-r5-eB7"/>
+                            <constraint firstItem="Nle-Wx-WF0" firstAttribute="top" secondItem="ubg-HC-KSF" secondAttribute="top" id="mDk-BR-Eo6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lql-b2-mIV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QZv-Ny-ko0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="-82"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="k93-IE-ZgJ">
+            <objects>
+                <viewController id="lmV-lU-tTh" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Zq-qc-NjY"/>
+                        <viewControllerLayoutGuide type="bottom" id="hum-5Z-PIF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="akh-bl-tL0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ryh-Uu-SKK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">
+You climb into the hole.
+
+There is a beautiful garden on the other side of the wall.
+
+You lay down on the grass and fall asleep while enjoying this awesome view.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ryh-Uu-SKK" secondAttribute="trailing" id="cNN-T7-cHK"/>
+                            <constraint firstItem="hum-5Z-PIF" firstAttribute="top" secondItem="Ryh-Uu-SKK" secondAttribute="bottom" id="omA-pf-sAP"/>
+                            <constraint firstItem="Ryh-Uu-SKK" firstAttribute="top" secondItem="akh-bl-tL0" secondAttribute="top" id="s6M-aN-XHY"/>
+                            <constraint firstItem="Ryh-Uu-SKK" firstAttribute="leading" secondItem="akh-bl-tL0" secondAttribute="leading" id="yxd-RI-WxZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wBW-F6-AG4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2b-br-mbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018" y="378"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dVA-Nf-NaY">
+            <objects>
+                <viewController id="mVZ-i6-TJa" customClass="MYOAViewController" customModule="MYOA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tmN-OS-hKE"/>
+                        <viewControllerLayoutGuide type="bottom" id="x9K-jZ-JsO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ia1-qi-Cwj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XDj-cM-IdD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">
+You turn around, but the origianl path disappear.
+
+You have no choice but keep walking and enter the hole.
+
+However, there is nothing inside and the entrance is gone as well, you are stuck in darkness.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x9K-jZ-JsO" firstAttribute="top" secondItem="XDj-cM-IdD" secondAttribute="bottom" id="1Q8-ID-dXL"/>
+                            <constraint firstItem="XDj-cM-IdD" firstAttribute="leading" secondItem="Ia1-qi-Cwj" secondAttribute="leading" id="Afu-Lt-n3H"/>
+                            <constraint firstAttribute="trailing" secondItem="XDj-cM-IdD" secondAttribute="trailing" id="HMy-IM-Vfi"/>
+                            <constraint firstItem="XDj-cM-IdD" firstAttribute="top" secondItem="Ia1-qi-Cwj" secondAttribute="top" id="P88-we-sUF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oaJ-kx-a9N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0VN-dn-pqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="761"/>
         </scene>
     </scenes>
 </document>
